@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reina Hamasaki</title>
-    <!-- 追加：ファビコン画像 -->
     <link rel="icon" href="fb5dd70ab722a11e619c18f74c90b1b7_t.jpeg" type="image/x-icon">
     <style>
         body {
@@ -24,12 +23,12 @@
             background-color: #343a40;
             color: #fff;
             text-align: left;
-            padding: 20px 0;
+            padding: 20px 10px; /* ヘッダーの左右のパディングを10pxに変更 */
             box-sizing: border-box;
         }
         h1 {
             font-weight: bold;
-            margin-left: 20px;
+            margin-left: 10px; /* ヘッダータイトルのマージンを10pxに変更 */
             text-align: left;
         }
         nav {
@@ -39,7 +38,7 @@
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 10px; /* ナビゲーションリンクのマージンを10pxに変更 */
             font-size: 18px;
             transition: color 0.3s;
         }
@@ -72,14 +71,12 @@
             flex-wrap: wrap;
         }
         .profile-info img.profile-img {
-            border-radius: 50%; /* 画像を丸くトリミングする */
-            width: 100%; /* 画面幅に合わせる */
-            max-width: 300px; /* 最大幅を指定 */
-            height: auto; /* 高さを自動調整 */
+            border-radius: 50%;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
             object-fit: cover;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 20px;
+            margin: 20px auto;
             display: block;
         }
         .icon {
@@ -93,57 +90,13 @@
             padding: 1rem 0;
             box-sizing: border-box;
         }
-        /* Added styles for skill list */
-        #skills .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start; 
-        }
-        #skills .skill-item {
-            margin-right: 10px; 
-            padding: 8px 12px;
-            background-color: #007bff;
-            color: #fff;
-            border-radius: 20px;
-            margin-bottom: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        #skills .skill-item:hover {
-            background-color: #0056b3;
-        }
-        /* Added styles for achievements */
-        .achievements {
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 2px solid #007bff;
-        }
-        .achievements h3 {
-            color: #007bff;
-        }
-        .achievements ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .achievements li {
-            margin-bottom: 10px;
-            text-align: left;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        .achievements li:before {
-            content: '★ ';
-            color: gold;
-        }
-        
-        /* Responsive Design */
         @media screen and (max-width: 768px) {
             nav {
                 text-align: center;
                 margin-top: 10px;
             }
             nav a {
-                margin: 0 10px;
+                margin: 0 5px; /* ナビゲーションリンクのマージンを5pxに変更 */
             }
             .portfolio-item iframe,
             #contact iframe {
@@ -163,18 +116,19 @@
             <a href="#skills">Skill</a>
             <a href="#projects">Project</a>
             <a href="#contact">Contact</a>
-            <a href="https://twitter.com/Rh_sapphire" target="_blank" style="margin: 10px;">
+            <a href="https://twitter.com/Rh_sapphire" target="_blank" style="margin: 5px;">
                 <img src="logo-white.png" class="icon">
             </a>
-            <a href="https://github.com/HamasakiReina" target="_blank" style="margin: 10px;">
+            <a href="https://github.com/HamasakiReina" target="_blank" style="margin: 5px;">
                 <img src="github-mark-white.png" class="icon">
             </a>
-            <a href="https://www.instagram.com/r_lifedays/" target="_blank" style="margin: 10px;">
+            <a href="https://www.instagram.com/r_lifedays/" target="_blank" style="margin: 5px;">
                 <img src="Instagram_Glyph_Gradient.png" class="icon">
             </a>
         </nav>
     </div>
 </header>
+
 
 
 
