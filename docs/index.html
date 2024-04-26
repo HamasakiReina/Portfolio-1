@@ -19,17 +19,12 @@
             max-width: 1200px;
             margin: auto;
             padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
         }
         header {
             background-color: #343a40;
             color: #fff;
             text-align: left;
             padding: 20px 0;
-            width: 100%;
             box-sizing: border-box;
         }
         h1 {
@@ -56,7 +51,6 @@
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            width: 100%;
             box-sizing: border-box;
         }
         h1, h2 {
@@ -79,8 +73,9 @@
         }
         .profile-info img.profile-img {
             border-radius: 50%; /* 画像を丸くトリミングする */
-            width: 300px;
-            height: 300px;
+            width: 100%; /* 画面幅に合わせる */
+            max-width: 300px; /* 最大幅を指定 */
+            height: auto; /* 高さを自動調整 */
             object-fit: cover;
             margin-left: auto;
             margin-right: auto;
@@ -96,7 +91,6 @@
             color: #ffffff;
             text-align: center;
             padding: 1rem 0;
-            width: 100%;
             box-sizing: border-box;
         }
         /* Added styles for skill list */
@@ -144,15 +138,17 @@
         
         /* Responsive Design */
         @media screen and (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
             nav {
                 text-align: center;
                 margin-top: 10px;
             }
             nav a {
                 margin: 0 10px;
+            }
+            .portfolio-item iframe,
+            #contact iframe {
+                max-width: 100%;
+                height: auto;
             }
         }
     </style>
@@ -163,7 +159,7 @@
     <div class="container">
         <h1>Reina Hamasaki's Portfolio</h1>
         <nav>
-            <a href="#About Me">About Me</a>
+            <a href="#About_Me">About Me</a>
             <a href="#skills">Skill</a>
             <a href="#projects">Project</a>
             <a href="#contact">Contact</a>
@@ -179,6 +175,8 @@
         </nav>
     </div>
 </header>
+
+
 
 
 
@@ -254,9 +252,7 @@
         <h2>慶應義塾大学湘南藤沢キャンパス未来構想キャンプ参加</h2>
         <p>触楽入門ワークショップ　～ソーシャルロボット x ハプティックス = 人工知能社会の未来～に参加しました。
         <br>日常生活のなかにある「さわり心地」を見つけ出して表現する方法論を学習し、ハプティックス技術を組み合わせ、
-        <br>人工知能との対話を前提とした人間とロボットが円滑にコミュニケーションできる情報環境のデザインを提案し、Pythonで制作したプロトタイプを制作して発表しました。
-        <br>
-        <br>
+        <br>人工知能との対話を前提とした人間とロボットが円滑にコミュニケーションできる情報環境のデザインを提案し、Pythonで制作したプロトタイプを制作して発表しました。</p>
         <iframe src="https://player.vimeo.com/video/282970531?h=38b6c90791" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
         <h2>日本科学未来館ビジョナリーキャンプ・プロジェクト参加</h2>
@@ -265,65 +261,46 @@
             <br>仮想空間上で過去の自分と対話することを可能にするシステムのプロトタイプを実際に仮想空間上に制作しました。
             <br>このシステムを使用することで、過去の自分が現在の自分の悩みに耳を傾け適切なアドバイスをくれたり鼓舞してくれたりする
             <br>「自分が自分を助ける」社会を提案しました。</p>
-        <li><a href="https://www.miraikan.jst.go.jp/sp/miraikanvisionaries/" target="_blank"><strong>イベント概要</strong></a></li>
+        <ul>
+            <li><a href="https://www.miraikan.jst.go.jp/sp/miraikanvisionaries/" target="_blank"><strong>イベント概要</strong></a></li>
+            <li><a href="https://note.com/m_visionaries/n/na261169ee634" target="_blank"><strong>参加の様子（チーム団子）</strong></a></li>
+        </ul>
 
-        <li><a href="https://note.com/m_visionaries/n/na261169ee634" target="_blank"><strong>参加の様子（チーム団子）</strong></a></li>
-
-        <br>
-        <br>
         <h2>カラオケアプリケーション</h2>
         <p>動画からボーカルを分離し、入力した声を配列に変換してコサイン類似度システムを使用し採点を行うアプリケーションを作成しました。</p>
-        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUFeAkI7llOaOUomWIq2QLXSaj8rhWSmVZerxKoTGf1hHli5fMc5xR2mK9YcKqZYlduDIHCN4taN-A/embed?start=false&loop=true&delayms=30000" frameborder="0" width="640" height="360" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>    <div class="portfolio-item">
-        <h1>ブランドロゴ判別webアプリケーション</h1>
-        <p>画像認識技術をプログラミングし、実在するブランドのロゴ画像を分析しどこのブランドか判別が容易になるアプリケーションを作成しました。</p>
-        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ6sojed0x9E4bxDEeJCH0UPn2xa3jLBaRUk0g3k1Gel55CCHBNsHtAQpGQe64qFIBcRJotpkXcwKSI/embed?start=false&loop=true&delayms=30000" frameborder="0" width="640" height="360" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-        <h1>風邪の原因を予測するベイジアンネットワークの作成</h1>
-        <p>推論モデルと組み合わせ診断を行う関数を使用し、流行状況を分析した上で個人の症状と生活習慣から風邪の原因を予測して、
-            <br>適切な対策を講じることが可能なベイジアンネットワークシステムデモを開発しました。</p>
-        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTMBVuGqU0cFEQRtCQ_Kl2PEeBweneAM5ZLAE2TJ5z3zoGhilKanKbsakVr7CxBvPHZ9BUXWt2fMDyL/embed?start=false&loop=true&delayms=30000" frameborder="0" width="640" height="369" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-        <h1>SDGsビジネスモデル考案</h1>
-        <p>SDGs目標14番「海の豊かさを守ろう」についての現状を知ってもらうツアーを考え、ビジネスモデルを考案し発表しました。</p>
-        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQjy17NQBA5KUNzcHx-GuLi5sIi-5nUJMhLCNHy0zqxwj5tAux-gK79K62GVchlciSlTYdRSPnZxYYn/embed?start=false&loop=false&delayms=3000" frameborder="0" width="640" height="360" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-        <br>
-        <br>
-        <p>持続可能な農業を目指す上での活動として堆肥茶について着目し、ビジネスモデルを考案し発表しました。</p>
-        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR3NaihdmApltc35EHvG0QLowJS6u5t77-l36IlHOU3LhzoioMnO2gb4oz7lT90dFxP7j9YHgl4mWRw/embed?start=false&loop=true&delayms=30000" frameborder="0" width="640" height="360" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUFeAkI7llOaOUomWIq2QLXSaj8rhWSmVZerxKoTGf1hHli5fMc5xR2mK9YcKqZYlduDIHCN4taN-A/embed?start=false&loop=true&delayms=30000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
+</section>
 
-    <section id="contact" class="container">
-        <h2>Contact</h2>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScQ4TQJ_mwrKLBV4AVeM-biGlQsltWX65orAKSl60hLYuCR0w/viewform?embedded=true" width="800" height="500" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>    
-    <footer class="footer mt-auto text-center">
-        <div class="container my-2">
-            <div class="row justify-content-center">
-                <div class="col">
-                    <div class="card-body">
-                        <p class="text-center mt-3">©︎ 2024 Reina Hamasaki</p>
-                    </div>
+<section id="contact" class="container">
+    <h2>Contact</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScQ4TQJ_mwrKLBV4AVeM-biGlQsltWX65orAKSl60hLYuCR0w/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>    
+</section>
+
+<footer class="footer mt-auto text-center">
+    <div class="container my-2">
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="card-body">
+                    <p class="text-center mt-3">©︎ 2024 Reina Hamasaki</p>
                 </div>
             </div>
         </div>
-    </footer>
-    
-    <script>
-        document.querySelector('nav').addEventListener('click', function(event) {
-            if (event.target.tagName === 'A') {
-                event.preventDefault(); 
-                const targetId = event.target.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId); 
-                if (targetSection) {
-                    
-                    targetSection.scrollIntoView({ behavior: 'smooth' });
-                }
+    </div>
+</footer>
+
+<script>
+    document.querySelector('nav').addEventListener('click', function(event) {
+        if (event.target.tagName === 'A') {
+            event.preventDefault(); 
+            const targetId = event.target.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId); 
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
             }
-        });
-    </script>
-    
-    </body>
-    </html>
+        }
+    });
+</script>
+
+</body>
+</html>
