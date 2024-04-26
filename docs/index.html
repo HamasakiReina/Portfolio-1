@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,40 +14,34 @@
             color: #333;
             line-height: 1.6;
         }
-
         .container {
             max-width: 1200px;
             margin: auto;
             padding: 20px;
         }
-
         header {
             background-color: #343a40;
             color: #fff;
             text-align: left;
-            padding: 10px 0; /* 縦幅をさらに小さくする */
+            padding: 10px 0; 
             box-sizing: border-box;
             position: fixed; /* ヘッダーを固定 */
             width: 100%; /* ヘッダーを画面幅に合わせる */
             top: 0; /* 上部に配置 */
             z-index: 999; /* コンテンツより手前に表示 */
         }
-
-        .header-hidden h1 {
-            display: none; /* スクロール時にh1を非表示にする */
+        header.nav-scroll {
+            position: fixed;
         }
-
         h1 {
             font-weight: bold;
             margin-left: 20px;
             text-align: left;
         }
-
         nav {
             text-align: right;
             margin-top: 10px;
         }
-
         nav a {
             color: #fff;
             text-decoration: none;
@@ -56,11 +49,9 @@
             font-size: 18px;
             transition: color 0.3s;
         }
-
         nav a:hover {
             color: #007bff;
         }
-
         section {
             margin: 100px 0 20px; /* ヘッダーがコンテンツを覆い隠さないようにする */
             background-color: #fff;
@@ -68,30 +59,24 @@
             padding: 20px;
             box-sizing: border-box;
         }
-
-        h1,
-        h2 {
+        h1, h2 {
             border-bottom: 2px solid #007bff;
             padding-bottom: 10px;
         }
-
         ul {
             list-style-type: none;
             padding: 0;
         }
-
         li {
             margin-bottom: 10px;
             text-align: left;
         }
-
         .profile-info {
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
             flex-wrap: wrap;
         }
-
         .profile-info img.profile-img {
             border-radius: 50%; /* 画像を丸くトリミングする */
             width: 100%; /* 画面幅に合わせる */
@@ -103,12 +88,10 @@
             margin-top: 20px;
             display: block;
         }
-
         .icon {
             width: 50px;
             height: 50px;
         }
-
         .footer {
             background-color: #008F7E;
             color: #ffffff;
@@ -116,16 +99,14 @@
             padding: 1rem 0;
             box-sizing: border-box;
         }
-
         /* Added styles for skill list */
         #skills .skill-list {
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-start;
+            justify-content: flex-start; 
         }
-
         #skills .skill-item {
-            margin-right: 10px;
+            margin-right: 10px; 
             padding: 8px 12px;
             background-color: #007bff;
             color: #fff;
@@ -134,50 +115,42 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
-
         #skills .skill-item:hover {
             background-color: #0056b3;
         }
-
         /* Added styles for achievements */
         .achievements {
             margin-top: 20px;
             padding-top: 20px;
             border-top: 2px solid #007bff;
         }
-
         .achievements h3 {
             color: #007bff;
         }
-
         .achievements ul {
             list-style-type: none;
             padding: 0;
         }
-
         .achievements li {
             margin-bottom: 10px;
             text-align: left;
             font-weight: bold;
             font-size: 18px;
         }
-
         .achievements li:before {
             content: '★ ';
             color: gold;
         }
-
+        
         /* Responsive Design */
         @media screen and (max-width: 768px) {
             nav {
                 text-align: center;
                 margin-top: 10px;
             }
-
             nav a {
                 margin: 0 10px;
             }
-
             .portfolio-item iframe,
             #contact iframe {
                 max-width: 100%;
@@ -186,7 +159,6 @@
         }
     </style>
 </head>
-
 <body>
 
 <header>
@@ -208,7 +180,13 @@
             </a>
         </nav>
     </div>
-<div style="height: 40px;"></div> <!-- Add space to prevent content from being overlapped by fixed header -->
+</header>
+
+<!-- 以下にコンテンツを追加 -->
+
+</body>
+</html>
+
 
 <section id="About Me" class="container">
     <h2>About Me</h2>
