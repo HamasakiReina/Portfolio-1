@@ -1,15 +1,9 @@
-
-マルチデバイスに対応させるために、以下の修正を行います。
-
-画像や動画の表示をレスポンシブにする。
-Google スライドや Google フォームの埋め込みをレスポンシブにする。
-html
-Copy code
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewportの設定を変更 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Reina Hamasaki</title>
     <!-- 追加：ファビコン画像 -->
     <link rel="icon" href="fb5dd70ab722a11e619c18f74c90b1b7_t.jpeg" type="image/x-icon">
@@ -86,16 +80,17 @@ Copy code
         }
         .profile-info img.profile-img {
             border-radius: 50%; /* 画像を丸くトリミングする */
-            width: 100%; /* 幅を100%にしてレスポンシブにする */
-            max-width: 300px; /* 最大幅を指定 */
-            height: auto; /* 高さは自動調整 */
+            width: 300px;
+            height: 300px;
             object-fit: cover;
-            margin: 20px auto; /* 上下のマージンを追加 */
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
             display: block;
         }
         .icon {
-            width: 50px;
-            height: 50px;
+            width: 30px; /* アイコンのサイズを調整 */
+            height: 30px; /* アイコンのサイズを調整 */
         }
         .footer {
             background-color: #008F7E;
@@ -161,10 +156,10 @@ Copy code
                 margin: 0 10px;
             }
         }
-        /* Responsive styles for embedded iframes */
+        /* Responsive iframe */
         iframe {
-            width: 100%;
-            height: 100%;
+            width: 100%; /* 画面幅に合わせてiframeの幅を設定 */
+            height: auto; /* 高さを自動調整 */
         }
     </style>
 </head>
@@ -190,7 +185,6 @@ Copy code
         </nav>
     </div>
 </header>
-
 
 <section id="About Me" class="container">
     <h2>About Me</h2>
@@ -306,9 +300,32 @@ Copy code
         <br>
     </div>
 
+<section id="projects" class="container">
+    <h2>Project</h2>
+    <div class="portfolio-item">
+        <h2>慶應義塾大学湘南藤沢キャンパス未来構想キャンプ参加</h2>
+        <p>触楽入門ワークショップ　～ソーシャルロボット x ハプティックス = 人工知能社会の未来～に参加しました。
+        <!-- 動画の表示をレスポンシブに対応 -->
+        <iframe src="https://player.vimeo.com/video/282970531?h=38b6c90791" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+        <h2>日本科学未来館ビジョナリーキャンプ・プロジェクト参加</h2>
+        <p>コミュニケーションというテーマを軸に過去の自分との対話を目標とするプロジェクト「自分カフェ」を発表しました。</p>
+        <!-- リンクをリストで表示 -->
+        <ul>
+            <li><a href="https://www.miraikan.jst.go.jp/sp/miraikanvisionaries/" target="_blank"><strong>イベント概要</strong></a></li>
+            <li><a href="https://note.com/m_visionaries/n/na261169ee634" target="_blank"><strong>参加の様子（チーム団子）</strong></a></li>
+        </ul>
+        <!-- スライドの表示をレスポンシブに対応 -->
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSUFeAkI7llOaOUomWIq2QLXSaj8rhWSmVZerxKoTGf1hHli5fMc5xR2mK9YcKqZYlduDIHCN4taN-A/embed?start=false&loop=true&delayms=30000" width="100%" height="360" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        <!-- 他のプロジェクトも同様に修正 -->
+    </div>
+
     <section id="contact" class="container">
         <h2>Contact</h2>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScQ4TQJ_mwrKLBV4AVeM-biGlQsltWX65orAKSl60hLYuCR0w/viewform?embedded=true" width="800" height="500" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>    
+        <!-- フォームの表示をレスポンシブに対応 -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScQ4TQJ_mwrKLBV4AVeM-biGlQsltWX65orAKSl60hLYuCR0w/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>    
+    </section>
+    
     <footer class="footer mt-auto text-center">
         <div class="container my-2">
             <div class="row justify-content-center">
@@ -328,13 +345,16 @@ Copy code
                 const targetId = event.target.getAttribute('href').substring(1);
                 const targetSection = document.getElementById(targetId); 
                 if (targetSection) {
-                    
                     targetSection.scrollIntoView({ behavior: 'smooth' });
                 }
             }
         });
     </script>
-    
-    </body>
-    </html>
-    
+</body>
+</html>
+
+
+
+
+
+
