@@ -23,15 +23,16 @@
             background-color: #343a40;
             color: #fff;
             text-align: left;
-            padding: 10px 0; 
+            padding: 20px 0; /* 縦幅を変更 */
             box-sizing: border-box;
-            position: fixed; /* ヘッダーを固定 */
-            width: 100%; /* ヘッダーを画面幅に合わせる */
-            top: 0; /* 上部に配置 */
-            z-index: 999; /* コンテンツより手前に表示 */
-        }
-        header.nav-scroll {
             position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 999;
+            transition: padding 0.3s; /* ヘッダーの縦幅の変化にトランジションを追加 */
+        }
+        .header-shrink {
+            padding: 10px 0; /* スクロール時の縮小後の縦幅 */
         }
         h1 {
             font-weight: bold;
@@ -53,7 +54,7 @@
             color: #007bff;
         }
         section {
-            margin: 50px 0 20px; /* ヘッダーがコンテンツを覆い隠さないようにする */
+            margin: 65px 0 20px; /* ヘッダーの高さ分だけ下にずらす */
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -78,10 +79,10 @@
             flex-wrap: wrap;
         }
         .profile-info img.profile-img {
-            border-radius: 50%; /* 画像を丸くトリミングする */
-            width: 100%; /* 画面幅に合わせる */
-            max-width: 300px; /* 最大幅を指定 */
-            height: auto; /* 高さを自動調整 */
+            border-radius: 50%;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
             object-fit: cover;
             margin-left: auto;
             margin-right: auto;
@@ -99,7 +100,6 @@
             padding: 1rem 0;
             box-sizing: border-box;
         }
-        /* Added styles for skill list */
         #skills .skill-list {
             display: flex;
             flex-wrap: wrap;
@@ -118,7 +118,6 @@
         #skills .skill-item:hover {
             background-color: #0056b3;
         }
-        /* Added styles for achievements */
         .achievements {
             margin-top: 20px;
             padding-top: 20px;
@@ -141,8 +140,7 @@
             content: '★ ';
             color: gold;
         }
-        
-        /* Responsive Design */
+
         @media screen and (max-width: 768px) {
             nav {
                 text-align: center;
@@ -181,8 +179,6 @@
         </nav>
     </div>
 </header>
-
-
 
 
 <section id="About Me" class="container">
