@@ -25,6 +25,10 @@
             text-align: left;
             padding: 10px 0; /* 縦幅をさらに小さくする */
             box-sizing: border-box;
+            position: fixed; /* ヘッダーを固定 */
+            width: 100%; /* ヘッダーを画面幅に合わせる */
+            top: 0; /* 上部に配置 */
+            z-index: 999; /* コンテンツより手前に表示 */
         }
         h1 {
             font-weight: bold;
@@ -46,7 +50,7 @@
             color: #007bff;
         }
         section {
-            margin: 20px 0;
+            margin: 100px 0 20px; /* ヘッダーがコンテンツを覆い隠さないようにする */
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -174,6 +178,7 @@
         </nav>
     </div>
 </header>
+
 
 
 <section id="About Me" class="container">
